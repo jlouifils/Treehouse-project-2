@@ -3,15 +3,15 @@ Treehouse Techdegree:
 FSJS project 2 - List Filter and Pagination
 ******************************************/
 
-// Add variables that store DOM elements you will need to reference and/or manipulate
+
 
 //varible with all 54 student inside
-const studentsNames = document.getElementsByClassName('student-item cf');
+const studentNames = document.getElementsByClassName('student-item cf');
 //variables that recognizes the page/page header
 const page = document.querySelector('.page');
 const header = document.querySelector('.page-header');
 //varible that could only up to ten students
-const pages = Math.ceil(studentName.length/10);
+const pages = Math.ceil(studentNames.length/10);
 //creating new variables for pagination
 const newDiv = document.createElement('div');
 const a = document.createElement('a');
@@ -33,7 +33,7 @@ const showTenStudents = (page, students) => {
   }
 }
 //function showing the first page of student names
-showTenStudents(1, studentsNames);
+showTenStudents(1, studentNames);
 
 
 
@@ -45,7 +45,7 @@ const pagination = () => {
   //appends the ul and new div on page
   const ul = document.createElement('ul');
   page.appendChild(newDiv);
-  newDiv.appendChild('ul');
+  newDiv.appendChild(ul);
   //loop that adds the correct amount of anchor tags based on the number of pages
   for (let i = 1; i <= pages; i++) {
        const li = document.createElement('li');
