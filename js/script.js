@@ -65,7 +65,7 @@ pagination();
 
 newDiv.addEventListener('click', (e) => {
   // creates a variable that brings up all anchor tags and its page number
-  let pageNumber = document.getElementByTagName('a');
+  let pageNumber = document.getElementsByTagName('a');
    //makes the anchor tags active when clicked by using an event listener
   if (e.target.tagName = 'a') {
             e.target.className = 'active';
